@@ -107,6 +107,12 @@ Produces: `Clipper-1.0.0-universal.dmg`
 
 ---
 
+## Architecture
+
+See [ARCHITECTURE.md](ARCHITECTURE.md) for the full technical architecture diagram covering component relationships, data flows, and the build pipeline.
+
+---
+
 ## How It Works
 
 - **Clipboard monitoring** — a `Timer` fires every 0.5s and reads `NSPasteboard.changeCount`. If the count changed, it reads the new text. This is a single integer comparison at idle — negligible CPU usage.
